@@ -53,7 +53,8 @@ As we were working on it, we decided the WordPress community needed a go-to CAS 
 
 ####Why did you use the phpCAS lirary?
 
-phpCAS,by JASIG, is the standard, vetted, php library for CAS, so rewriting it from scratch would be counterproductive.
+phpCAS,by JASIG, is the standard, vetted, php library for CAS, so rewriting it from scratch would be counterproductive.  
+It also makes the plugin easier to configure.
 
 ####Will this work with our version of CAS?
 
