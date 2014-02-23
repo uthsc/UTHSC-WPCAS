@@ -27,9 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 //To Do:
-//Cleanup on unistall
-//Reset options
-//Enable Debugging (Set debug path)
 //Lockdown option to restrict users who aren't authenticated
 //Update user info if cas response doesn't match user account
 //Restrict access to users who already have WordPress accounts (WP Accounts must be entered manually before users can Authenticate with CAS)
