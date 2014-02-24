@@ -67,6 +67,7 @@ If you're having trouble, check the phpCAS documentation or let us know in the s
 You may want to test CAS outside of WordPress first to make sure everything works and you're getting attributes back. For more information about testing and to download some example files from phpCAS, go to https://github.com/uthsc/UTHSC-WPCAS/tree/master/test
 
 If you aren't getting attributes back, you'll probably need to make some adjustments to your CAS server. Check the Cas documentation at https://wiki.jasig.org/display/casum/attributes for more information about attributes and getting them to work.
+
 If you are getting attributes back and they are being applied to new user accounts incorrectly, it's probably just a matter of how the cas response is being parsed by the plugin.
 
 Right now, it is based on the response we get but it may be different for pther users. You can change the array indexes in the plugin settings if they are different from the defaults but if your response is completely incompatible, let us know and we'll consider updating the plugin to accept more formats.
