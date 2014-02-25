@@ -4,7 +4,7 @@ Donate Link: http://uthsc.edu
 Tags: cas, authentication, central authentication service, phpCAS
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 0.1
+Stable tag: 0.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -85,12 +85,12 @@ If you have ideas for features or improvements, let us know or submit a pull req
 
 == Changelog ==
 
-= 0.1 =
+= 0.2.0 =
 Initial release
 
 == Upgrade Notice ==
 
-= 0.1 =
+= 0.2.0 =
 
 == Special thanks ==
 
