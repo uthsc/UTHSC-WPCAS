@@ -130,7 +130,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 		}
 
 		function add_options_pages() {
-			$icon = plugin_dir_url( __FILE__ ).'assets/img/cas-logo.png';
+			$icon = plugin_dir_url( __FILE__ ).'img/cas-logo.png';
 
 			add_menu_page('UTHSC WP CAS', 'UTHSC WP CAS', 'administrator', 'uthsc-wpcas-settings', 'uthsc_wpcas_preferences', $icon, 100);
 			add_submenu_page('uthsc-wpcas-settings', 'CAS Test', 'CAS Test', 'administrator', 'uthsc-wpcas-test', 'uthsc_wpcas_test');
