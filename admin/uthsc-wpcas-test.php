@@ -40,10 +40,10 @@ function uthsc_wpcas_test() {
 				
 			$error = '
 			<p style="color:red;"><strong>Something\'s wrong here. phpCAS::isAuthenticated() returned false. 
-			You may just need to log in with cas first; try logging in with a different browser.  
-			You can check the <a href="' . str_replace( 'admin/', 'test/authpage.php', plugin_dir_url( __FILE__ ) ) . '">authpage.php</a> 
-			file in the plugin\'s test directory to see if CAS is working properly.
-			(You\'ll need to edit the settings in the config file manually).</strong></p>';
+			Try logging in with a different browser.  
+			You may want to test CAS outside of Wordpress to make sure everything works. 
+			For more info checkout the <a href="https://github.com/uthsc/UTHSC-WPCAS/tree/master/test" >UTHSC-WPCAS test directory on GitHub</a>. 
+			</strong></p>';
 
 			if (phpCAS::isAuthenticated()) {
 
