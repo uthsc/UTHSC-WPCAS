@@ -96,6 +96,12 @@ Changelog
 
 0.2 - Initial release
 
+Testing
+---
+
+Since UTHSC-WPCAS uses phpCAS, you should be able to refer phpCAS documentation at https://wiki.jasig.org/display/casc/phpcas for most CAS related issues.  
+You can also checkout the UTHSC-WPCAS test directory at https://github.com/uthsc/UTHSC-WPCAS/tree/master/test that includes some instructions and is hardcoded with variables that correspond to the default plugin options.
+
 
 Special thanks
 ---
