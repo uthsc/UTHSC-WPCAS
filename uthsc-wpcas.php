@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/uthsc/uthsc-wpcas
  * Description: A plugin that uses phpCAS to integrate CAS with WordPress.
  * Author: George Spake - UTHSC
- * Version: 0.1
+ * Version: 0.2.1
  * Author URI: http://uthsc.edu/
  * License: GPLv3
 */
@@ -62,7 +62,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 				add_action('init', array(&$this, 'activate'));
 			}
 			
-			if ( get_option( 'wpcas_host' ) ) {
+			if ( get_option( 'uthsc_wpcas_host' ) ) {
 				//Initialize phpCAS
 				$this->initialize_phpCAS();
 			}
@@ -88,7 +88,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 		public function register_wpcas_settings() {
 			$wpcas_options = new UTHSC_WPCAS_Options;
 
-			foreach ( $wpcas_options->wpcas_settings() as $group => $options) {
+			foreach ( $wpcas_options->uthsc_wpcas_settings() as $group => $options) {
 				foreach ($options as $option => $default){
 					register_setting($group, $option);
 				}
@@ -99,7 +99,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 		public static function activate() {
 			$wpcas_options = new UTHSC_WPCAS_Options;
 			
-			foreach ( $wpcas_options->wpcas_settings() as $group => $options) {
+			foreach ( $wpcas_options->uthsc_wpcas_settings() as $group => $options) {
 				foreach ($options as $option => $default){
 					update_option($option, $default);
 				}
@@ -110,7 +110,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 		public static function deactivate() {
 			$wpcas_options = new UTHSC_WPCAS_Options;
 			
-			foreach ( $wpcas_options->wpcas_settings() as $group => $options) {
+			foreach ( $wpcas_options->uthsc_wpcas_settings() as $group => $options) {
 				foreach ($options as $option => $default){
 					update_option($option, '');
 					unregister_setting($group, $option);
@@ -122,7 +122,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 		public static function uninstall() {
 			$wpcas_options = new UTHSC_WPCAS_Options;
 			
-			foreach ( $wpcas_options->wpcas_settings() as $group => $options) {
+			foreach ( $wpcas_options->uthsc_wpcas_settings() as $group => $options) {
 				foreach ($options as $option => $default){
 					delete_option($option);
 				}
@@ -162,7 +162,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 
 			}
 
-			return 'https://'. get_option('wpcas_host') . get_option('wpcas_context') . '/login?service='. $login_url;
+			return 'https://'. get_option('uthsc_wpcas_host') . get_option('uthsc_wpcas_context') . '/login?service='. $login_url;
 
 		}
 
@@ -178,11 +178,11 @@ if ( !class_exists('UTHSCWPCAS') ) {
 			require_once 'phpCAS-1.3-stable/CAS.php';
 			
 			// Initialize phpCAS
-			phpCAS::client(SAML_VERSION_1_1, get_option('wpcas_host'),intval(get_option('wpcas_port')), get_option('wpcas_context'));
+			phpCAS::client(SAML_VERSION_1_1, get_option('uthsc_wpcas_host'),intval(get_option('uthsc_wpcas_port')), get_option('uthsc_wpcas_context'));
 			
 			// For production use set the CA certificate that is the issuer of the cert
 			// on the CAS server and uncomment the line below
-			phpCAS::setCasServerCACert(get_option('wpcas_cert_path'));
+			phpCAS::setCasServerCACert(get_option('uthsc_wpcas_cert_path'));
 
 			// For quick testing you can disable SSL validation of the CAS server.
 			// THIS SETTING IS NOT RECOMMENDED FOR PRODUCTION.
@@ -211,9 +211,9 @@ if ( !class_exists('UTHSCWPCAS') ) {
 				//To test, you can use var_dump($cas_attributes)
 				$userdata = array (
 				'user_login'		=>	$cas_user,
-				'last_name'			=>	$cas_attributes[get_option('wpcas_last_name')],
-				'first_name'		=>	$cas_attributes[get_option('wpcas_first_name')]['1'],
-				'user_email'		=>	$cas_attributes[get_option('wpcas_user_email')]
+				'last_name'			=>	$cas_attributes[get_option('uthsc_wpcas_last_name')],
+				'first_name'		=>	$cas_attributes[get_option('uthsc_wpcas_first_name')]['1'],
+				'user_email'		=>	$cas_attributes[get_option('uthsc_wpcas_user_email')]
 				);
 
 				//If the user hasn't logged in to Wordpress before, create an account with the Attributes returned by cas
@@ -231,7 +231,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 				}
 
 				//return the login url
-				return 'https://'. get_option('wpcas_host') . get_option('wpcas_context') . '/login?service='. $login_url;				
+				return 'https://'. get_option('uthsc_wpcas_host') . get_option('uthsc_wpcas_context') . '/login?service='. $login_url;				
 				
 			}
 
