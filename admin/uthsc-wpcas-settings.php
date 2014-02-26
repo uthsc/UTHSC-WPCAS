@@ -32,12 +32,12 @@ function uthsc_wpcas_preferences() {
 					<p>Defaults to "auth.uthsc.edu"</p>
 					<ul>
 						<li>
-							<label for="wpcas_host">CAS Host</label>
+							<label for="uthsc_wpcas_host">CAS Host</label>
 							<input 
 								type="text" 
-								name="wpcas_host" 
-								value="<?php echo get_option('wpcas_host')?>"
-								id="wpcas_host" 
+								name="uthsc_wpcas_host" 
+								value="<?php echo get_option('uthsc_wpcas_host')?>"
+								id="uthsc_wpcas_host" 
 								/>
 							
 						</li>
@@ -49,12 +49,12 @@ function uthsc_wpcas_preferences() {
 					<p>Defaults to "/cas"</p>
 					<ul>
 						<li>
-							<label for="wpcas_context">CAS Context</label>
+							<label for="uthsc_wpcas_context">CAS Context</label>
 							<input 
 								type="text" 
-								name="wpcas_context" 
-								value="<?php echo get_option('wpcas_context')?>"
-								id="wpcas_context" 
+								name="uthsc_wpcas_context" 
+								value="<?php echo get_option('uthsc_wpcas_context')?>"
+								id="uthsc_wpcas_context" 
 								/>
 							
 						</li>
@@ -66,12 +66,12 @@ function uthsc_wpcas_preferences() {
 					<p>Defaults to 443</p>
 					<ul>
 						<li>
-							<label for="wpcas_port">CAS Port</label>
+							<label for="uthsc_wpcas_port">CAS Port</label>
 							<input
 								type="text" 
-								name="wpcas_port" 
-								value="<?php echo get_option('wpcas_port')?>"
-								id="wpcas_port" 
+								name="uthsc_wpcas_port" 
+								value="<?php echo get_option('uthsc_wpcas_port')?>"
+								id="uthsc_wpcas_port" 
 							/>
 						</li>
 					</ul>
@@ -82,13 +82,13 @@ function uthsc_wpcas_preferences() {
 					<p>Path to CAS Cert</p>
 					<ul>
 						<li>
-							<label for="wpcas_cert_path">CAS Cert Path</label>
+							<label for="uthsc_wpcas_cert_path">CAS Cert Path</label>
 							<input
 								size="70"
 								type="text" 
-								name="wpcas_cert_path" 
-								value="<?php echo get_option('wpcas_cert_path')?>"
-								id="wpcas_cert_path" 
+								name="uthsc_wpcas_cert_path" 
+								value="<?php echo get_option('uthsc_wpcas_cert_path')?>"
+								id="uthsc_wpcas_cert_path" 
 								/>
 							
 						</li>
@@ -100,22 +100,22 @@ function uthsc_wpcas_preferences() {
 					<p>Array indexes returned by cas that will be used as args for wp_insert() when new users are created. WordPress username will use uid returned by CAS.</p>
 					<ul>
 						<li>
-							<label for="wpcas_first_name">First Name</label>
+							<label for="uthsc_wpcas_first_name">First Name</label>
 							<input
 								type="text"
-								name="wpcas_first_name"
-								value="<?php echo get_option('wpcas_first_name')?>"
-								id="wpcas_first_name"
+								name="uthsc_wpcas_first_name"
+								value="<?php echo get_option('uthsc_wpcas_first_name')?>"
+								id="uthsc_wpcas_first_name"
 							/>
 						</li>
 
 						<li>
-							<label for="wpcas_last_name">Last Name</label>
+							<label for="uthsc_wpcas_last_name">Last Name</label>
 							<input
 								type="text"
-								name="wpcas_last_name"
-								value="<?php echo get_option('wpcas_last_name')?>"
-								id="wpcas_last_name"
+								name="uthsc_wpcas_last_name"
+								value="<?php echo get_option('uthsc_wpcas_last_name')?>"
+								id="uthsc_wpcas_last_name"
 							/>
 						</li>
 
@@ -123,9 +123,9 @@ function uthsc_wpcas_preferences() {
 							<label for="wpcas_user_email">Email</label>
 							<input
 								type="text"
-								name="wpcas_user_email"
-								value="<?php echo get_option('wpcas_user_email')?>"
-								id="wpcas_user_email"
+								name="uthsc_wpcas_user_email"
+								value="<?php echo get_option('uthsc_wpcas_user_email')?>"
+								id="uthsc_wpcas_user_email"
 							/>
 						</li>
 
@@ -149,10 +149,10 @@ function uthsc_wpcas_preferences() {
 					<p>If this is turned on, users will be forced to log in to see the site</p>
 					<ul>
 						<li>
-								<label for="wpcas-lockdown-off">Off</label>
-								<input type="radio" name="wpcas_lockdown" id="wpcas-lockdown-off" value="off" <?php  echo get_option('wpcas_lockdown') == 'off' ? 'checked="checked"' : '' ?> />
-								<label for="wpcas-lockdown-on">On</label>
-								<input type="radio" name="wpcas_lockdown" id="wpcas-lockdown-on" value="on"  <?php  echo get_option('wpcas_lockdown') == 'on' ? 'checked="checked"' : '' ?> />
+								<label for="uthsc_wpcas_lockdown_off">Off</label>
+								<input type="radio" name="uthsc_wpcas_lockdown" id="uthsc_wpcas_lockdown_off" value="off" <?php  echo get_option('uthsc_wpcas_lockdown') == 'off' ? 'checked="checked"' : '' ?> />
+								<label for="uthsc_wpcas_lockdown_on">On</label>
+								<input type="radio" name="uthsc_wpcas_lockdown" id="uthsc_wpcas_lockdown_on" value="on"  <?php  echo get_option('uthsc_wpcas_lockdown') == 'on' ? 'checked="checked"' : '' ?> />
 						</li>
 					</ul>
 				</fieldset>
@@ -162,10 +162,10 @@ function uthsc_wpcas_preferences() {
 					<p>Users must already have a WordPress account on the site to login<br /></p>
 					<ul>
 						<li>
-								<label for="wpcas-restrict-new-users-off">Off</label>
-								<input type="radio" name="wpcas_restrict_new_users" id="wpcas-restrict-new-users-off" value="off" <?php  echo get_option('wpcas_restrict_new_users') == 'off' ? 'checked="checked"' : '' ?> />
-								<label for="wpcas-restrict-new-users-on">On</label>
-								<input type="radio" name="wpcas_restrict_new_users" id="wpcas-restrict-new-users-on" value="on"  <?php  echo get_option('wpcas_restrict_new_users') == 'on' ? 'checked="checked"' : '' ?> />
+								<label for="wpcas_restrict_new_users_off">Off</label>
+								<input type="radio" name="uthsc_wpcas_restrict_new_users" id="uthsc_wpcas_restrict_new_users_off" value="off" <?php  echo get_option('uthsc_wpcas_restrict_new_users') == 'off' ? 'checked="checked"' : '' ?> />
+								<label for="wpcas_restrict_new_users_on">On</label>
+								<input type="radio" name="uthsc_wpcas_restrict_new_users" id="uthsc_wpcas_restrict_new_users_on" value="on"  <?php  echo get_option('uthsc_wpcas_restrict_new_users') == 'on' ? 'checked="checked"' : '' ?> />
 						</li>
 					</ul>
 				</fieldset>
@@ -175,10 +175,10 @@ function uthsc_wpcas_preferences() {
 					<p>Checks WordPress account attributes against attributes returned by CAS and updates them if they are different.</p>
 					<ul>
 						<li>
-								<label for="wpcas-update-acct-off">Off</label>
-								<input type="radio" name="wpcas_update_acct" id="wpcas-update-acct-off" value="off" <?php  echo get_option('wpcas_update_acct') == 'off' ? 'checked="checked"' : '' ?> />
-								<label for="wpcas-update-acct-on">On</label>
-								<input type="radio" name="wpcas_update_acct" id="wpcas-update-acct-on" value="on"  <?php  echo get_option('wpcas_update_acct') == 'on' ? 'checked="checked"' : '' ?> />
+								<label for="uthsc_wpcas_update_acct_off">Off</label>
+								<input type="radio" name="uthsc_wpcas_update_acct" id="uthsc_wpcas_update_acct_off" value="off" <?php  echo get_option('uthsc_wpcas_update_acct') == 'off' ? 'checked="checked"' : '' ?> />
+								<label for="uthsc_wpcas_update_acct_on">On</label>
+								<input type="radio" name="uthsc_wpcas_update_acct" id="uthsc_wpcas_update_acct_on" value="on"  <?php  echo get_option('uthsc_wpcas_update_acct') == 'on' ? 'checked="checked"' : '' ?> />
 						</li>
 					</ul>
 				</fieldset>
