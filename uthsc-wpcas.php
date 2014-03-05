@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/uthsc/uthsc-wpcas
  * Description: A plugin that uses phpCAS to integrate CAS with WordPress.
  * Author: George Spake - UTHSC
- * Version: 0.2.1
+ * Version: 0.2.2
  * Author URI: http://uthsc.edu/
  * License: GPLv3
 */
