@@ -4,7 +4,7 @@ Donate Link: http://uthsc.edu
 Tags: cas, authentication, central authentication service, phpCAS
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -84,6 +84,10 @@ If you have ideas for features or improvements, let us know or submit a pull req
 2. Test page in UTHSC-WPCAS settings. The test page provides session info and lists information about the current user. Manual test files are available in the plugin's test directory.
 
 == Changelog ==
+
+= 0.2.2 =
+Fixed format issue with first name value
+Changed menu position to avoid conflicts with other plugins.
 
 = 0.2.1 =
 Updated option names to avoid potential conflicts
