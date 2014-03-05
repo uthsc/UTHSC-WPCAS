@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/uthsc/uthsc-wpcas
  * Description: A plugin that uses phpCAS to integrate CAS with WordPress.
  * Author: George Spake - UTHSC
- * Version: 0.2.1
+ * Version: 0.2.2
  * Author URI: http://uthsc.edu/
  * License: GPLv3
 */
@@ -132,7 +132,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 		function add_options_pages() {
 			$icon = plugin_dir_url( __FILE__ ).'img/cas-logo.png';
 
-			add_menu_page('UTHSC WP CAS', 'UTHSC WP CAS', 'administrator', 'uthsc-wpcas-settings', 'uthsc_wpcas_preferences', $icon, 100);
+			add_menu_page('UTHSC WP CAS', 'UTHSC WP CAS', 'administrator', 'uthsc-wpcas-settings', 'uthsc_wpcas_preferences', $icon, '98.9');
 			add_submenu_page('uthsc-wpcas-settings', 'CAS Test', 'CAS Test', 'administrator', 'uthsc-wpcas-test', 'uthsc_wpcas_test');
 			add_submenu_page('uthsc-wpcas-settings', 'About', 'About', 'administrator', 'uthsc-wpcas-about', 'uthsc_wpcas_about');		
 		}
@@ -211,8 +211,8 @@ if ( !class_exists('UTHSCWPCAS') ) {
 				//To test, you can use var_dump($cas_attributes)
 				$userdata = array (
 				'user_login'		=>	$cas_user,
-				'last_name'			=>	$cas_attributes[get_option('uthsc_wpcas_last_name')],
-				'first_name'		=>	$cas_attributes[get_option('uthsc_wpcas_first_name')]['1'],
+				'last_name'		=>	$cas_attributes[get_option('uthsc_wpcas_last_name')],
+				'first_name'		=>	is_array( $cas_attributes[get_option('uthsc_wpcas_first_name')] ) ? $cas_attributes[get_option('uthsc_wpcas_first_name')]['1'] : $cas_attributes[get_option('uthsc_wpcas_first_name')],
 				'user_email'		=>	$cas_attributes[get_option('uthsc_wpcas_user_email')]
 				);
 
