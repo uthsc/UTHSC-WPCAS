@@ -211,8 +211,8 @@ if ( !class_exists('UTHSCWPCAS') ) {
 				//To test, you can use var_dump($cas_attributes)
 				$userdata = array (
 				'user_login'		=>	$cas_user,
-				'last_name'			=>	$cas_attributes[get_option('uthsc_wpcas_last_name')],
-				'first_name'		=>	$cas_attributes[get_option('uthsc_wpcas_first_name')]['1'],
+				'last_name'		=>	$cas_attributes[get_option('uthsc_wpcas_last_name')],
+				'first_name'		=>	is_array( $cas_attributes[get_option('uthsc_wpcas_first_name')] ) ? $cas_attributes[get_option('uthsc_wpcas_first_name')]['1'] : $cas_attributes[get_option('uthsc_wpcas_first_name')],
 				'user_email'		=>	$cas_attributes[get_option('uthsc_wpcas_user_email')]
 				);
 
