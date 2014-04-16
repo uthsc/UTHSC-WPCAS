@@ -19,7 +19,7 @@ This plugin uses the phpCAS library to integrate CAS single sign on with Wordpre
 *	Login screen redirects to CAS url specified in options  
 *	New user accounts will be created for users who have not logged in to the site yet  
 *	User attributes returned by CAS can be used to populate new user account details such as email address and display name.  
-*	Service urls can be captured to redirect users to the samepage on log in/out. (Logoutwithredirectservice must be enabeld on CAS server for log out redirects to work.)
+*	Service urls can be captured to redirect users to the same page on log in/out. (Logoutwithredirectservice must be enabled on CAS server for log out redirects to work.)
 
 == Installation ==
 
@@ -66,11 +66,11 @@ If you're having trouble, check the phpCAS documentation or let us know in the s
 
 You may want to test CAS outside of WordPress first to make sure everything works and you're getting attributes back. For more information about testing and to download some example files from phpCAS, go to https://github.com/uthsc/UTHSC-WPCAS/tree/master/test
 
-If you aren't getting attributes back, you'll probably need to make some adjustments to your CAS server. Check the Cas documentation at https://wiki.jasig.org/display/casum/attributes for more information about attributes and getting them to work.
+If you aren't getting attributes back, you'll probably need to make some adjustments to your CAS server. Check the CAS documentation at https://wiki.jasig.org/display/casum/attributes for more information about attributes and getting them to work.
 
-If you are getting attributes back and they are being applied to new user accounts incorrectly, it's probably just a matter of how the cas response is being parsed by the plugin.
+If you are getting attributes back and they are being applied to new user accounts incorrectly, it's probably just a matter of how the CAS response is being parsed by the plugin.
 
-Right now, it is based on the response we get but it may be different for pther users. You can change the array indexes in the plugin settings if they are different from the defaults but if your response is completely incompatible, let us know and we'll consider updating the plugin to accept more formats.
+Right now, it is based on the response we get but it may be different for other users. You can change the array indexes in the plugin settings if they are different from the defaults but if your response is completely incompatible, let us know and we'll consider updating the plugin to accept more formats.
 
 = How can I contribute to this plugin? =
 
