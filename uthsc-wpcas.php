@@ -148,7 +148,7 @@ if ( !class_exists('UTHSCWPCAS') ) {
 			}
 		}
 
-		function wpcas_login_url($redirect = '', $force_reauth = false) {
+		static function wpcas_login_url($redirect = '', $force_reauth = false) {
 			$login_url = site_url('wp-login.php', 'login');
 		
 			if ( !empty($redirect) ) {
