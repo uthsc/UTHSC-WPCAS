@@ -46,36 +46,36 @@ Make sure to keep a separate session open during configuration and testing so yo
 Frequently Asked Questions    
 ---
 
-####Why was this plugin developed?
+#### Why was this plugin developed?
 
 This plugin was developed for UTHSC because we wanted to integrate CAS in to WordPress and there weren't any existing, actively maintained, that worked for us.
 As we were working on it, we decided the WordPress community needed a go-to CAS plugin that works for everyone; that's what we want UTHSC-WPCAS to be.
 
-####Why did you use the phpCAS lirary?
+#### Why did you use the phpCAS lirary?
 
 phpCAS,by JASIG, is the standard, vetted, php library for CAS, so rewriting it from scratch would be counterproductive.  
 It also makes the plugin easier to configure.
 
-####Will this work with our version of CAS?
+#### Will this work with our version of CAS?
 
 This should work with CAS 3.4 and later.
 
-####Will it work with multisite?
+#### Will it work with multisite?
 
 We've tested the plugin with and without multisite and it seems to work in both cases.
 
-####How should I know what my settings should be?
+#### How should I know what my settings should be?
 
 Chances are, if you've downloaded this plugin you're already using CAS and, hopefully, you're using phpCAS.
 So, most of these settings should look pretty familiar. If you're having trouble, check the phpCAS documentation or let us know in the support section.
 
-####How do I install phpCAS?
+#### How do I install phpCAS?
 
 CAS is a php library and it's included with this plugin so you don't need to install anything.
 for more information about phpCAS, visit https://wiki.jasig.org/display/casc/phpcas
 
 
-####The plugin is working but new user account attributes are blank or incorrect.
+#### The plugin is working but new user account attributes are blank or incorrect.
 
 You may want to test CAS outside of WordPress first to make sure everything works and you're getting attributes back. For more information about testing and to download some example files from phpCAS, go to https://github.com/uthsc/UTHSC-WPCAS/tree/master/test
 
@@ -84,7 +84,7 @@ If you are getting attributes back and they are being applied to new user accoun
 
 Right now, it is based on the response we get but it may be different for pther users. You can change the array indexes in the plugin settings if they are different from the defaults but if your response is completely incompatible, let us know and we'll consider updating the plugin to accept more formats.
 
-####How can I contribute to this plugin?
+#### How can I contribute to this plugin?
 
 We'll be managing the project at https://github.com/uthsc/UTHSC-WPCAS and would love your feedback.
 UTHSC WPCAS was developed to work with UTHSC's configuration but we want it to work for as many people as possible;
